@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contacto - Jhosue</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <main>
+            <div class="frame">
+
+            <article class="block" id="formulario">
+            <span class="label">formulario</span>
+            <h2>Escríbeme</h2>
+
+            <form action="#" method="post" onsubmit="return false;">
+
+            <fieldset>
+                <legend>Datos de contacto</legend>
+
+                <div class="field">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                </div>
+
+                <div class="field">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                <label for="asunto">Asunto</label>
+                <select id="asunto" name="asunto">
+                    <option value="consulta">Consulta general</option>
+                    <option value="proyecto">Propuesta de proyecto</option>
+                    <option value="colaboracion">Colaboración académica</option>
+                </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferencia de respuesta</legend>
+                <div class="radio-row">
+                <input type="radio" id="pref-correo" name="preferencia" value="correo" checked>
+                <label for="pref-correo">Correo electrónico</label>
+                </div>
+                <div class="radio-row">
+                <input type="radio" id="pref-telefono" name="preferencia" value="telefono">
+                <label for="pref-telefono">Teléfono</label>
+                </div>
+            </fieldset>
+
+            <div class="field">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+
+            <div class="checkbox-row">
+            <input type="checkbox" id="privacidad" name="privacidad" required>
+            <label for="privacidad">Acepto que este es un formulario de demostración sin envío real.</label>
+          </div>
+
+          <button type="submit">Enviar mensaje</button>
+            </form>
+            </article>
+        </main>
+    </body>
+</html>
