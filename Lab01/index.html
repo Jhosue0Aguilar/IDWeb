@@ -1,42 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title> Mi pagina personal</title>
-    <style type="text/css">
-        body {
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: rgb(0, 0, 0);
-            background-color: rgb(120, 210, 190);
-            }
-        h1 {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Académico — Jhosue Aguilar</title>
+    <meta name="author" content="Jhosue Joaquin Aguilar Pacheco">
+    <meta name="description" content="Portafolio académico de Jhosue Aguilar, estudiante de Ingeniería de Sistemas — UNSA.">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<!-- Titulo y menu de navegacion-->
 <body>
-    <h1>Portafolio Academico</h1>
-    
-    <ul class = "navbar">
-        <li><a href = index.html>Pagina principal</a>
-        <li><a href="autor.html">Autor</a>
-        <li><a href="system.html">Eleccion de carrera</a>
-        <li><a href="w3c.html">Estandar de formato</a>
-        <li><a href="contact.html">Contactame</a>
-    </ul>
 
-    <h2>Datos del curso</h2>
+    <nav aria-label="Navegación principal">
+        <ul class="navbar">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#carrera">Mi carrera</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#estandares">Estándares web</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
-    <p>Curso: Introduccion al Desarrollo Web </p>
-    <p>Docente: Ing. Rene Alonso Nieto Valencia</p>
-    <p>Alumno: Jhosue Joaquin Aguilar Pacheco</p>
-    
+    <header>
+        <p class="curso-tag">Introducción al Desarrollo Web · 2026B · Laboratorio 01</p>
+        <h1>Jhosue Aguilar &mdash; Portafolio académico</h1>
+    </header>
+
+    <main>
+        <article id="sobre-mi" class="block">
+            <span class="label">01 — quién soy</span>
+            <h2>Sobre mí</h2>
+            <p>Me llamo Jhosue Joaquin Aguilar Pacheco, tengo 17 años y soy de la ciudad de Arequipa.
+                Estudio en la Universidad Nacional de San Agustín, en la carrera de Ingeniería de Sistemas.</p>
+            <p>Fuera de las aulas, reparto mi tiempo entre el deporte, los videojuegos y los amigos de siempre.
+                Estos son los pasatiempos que más disfruto:</p>
+            <ul>
+                <li>Natación, casi todas las semanas.</li>
+                <li>Básket con amigos del barrio.</li>
+                <li>Videojuegos en equipo, sobre todo por las noches.</li>
+                <li>Salidas y viajes cortos con mi grupo de amigos.</li>
+            </ul>
+            <figure>
+                <img src="img/natacion.jpg" alt="Nadadores compitiendo en piscina de carriles" width="300" height="200">
+                <figcaption>Natación, uno de mis deportes favoritos.</figcaption>
+            </figure>
+            <figure>
+                <img src="img/videojuegos.jpg" alt="Manos sosteniendo un control mientras se juega frente a un teclado retroiluminado" width="300" height="200">
+                <figcaption>Sesión de videojuegos con amigos.</figcaption>
+            </figure>
+        </article>
+
+        <article id="carrera" class="block">
+            <span class="label">02 — mi elección</span>
+            <h2>¿Por qué Ingeniería de Sistemas?</h2>
+            <p>Elegí esta carrera por mi afición a la computación y mi gusto por el mundo digital. Me impulsó
+                la curiosidad de entender cómo, a partir de conjuntos de órdenes que conforman los algoritmos,
+                se pueden construir grandes programas capaces de manejar y aprovechar enormes cantidades de información.</p>
+            <p>Más allá de la constante interacción con la tecnología, me sorprende cómo siempre surgen nuevos
+                avances y algoritmos que cambian y facilitan la forma de crear programas, lo que me motiva a
+                querer desarrollar los míos propios.</p>
+            <p>Estas son las razones que más pesaron en mi decisión, en orden de importancia para mí:</p>
+            <ol>
+                <li>El gusto genuino por resolver problemas con lógica y algoritmos.</li>
+                <li>La posibilidad de crear programas que organizan y aprovechan información real.</li>
+                <li>El ritmo de innovación constante del área, que nunca deja de sorprenderme.</li>
+                <li>Las oportunidades de trabajo que ofrece el rubro tecnológico hoy en día.</li>
+            </ol>
+        </article>
+
+        <section id="proyectos" class="block">
+            <span class="label">03 — laboratorio</span>
+            <h2>Proyectos académicos realizados</h2>
+            <p>Resumen de los ejercicios desarrollados durante el curso de Introducción al Desarrollo Web.</p>
+            <table>
+                <caption>Proyectos del curso Introducción al Desarrollo Web — 2026B</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Proyecto</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Tecnologías</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Portafolio semántico</th>
+                        <td>Página principal del portafolio, estructurada con HTML5 semántico.</td>
+                        <td>HTML5, CSS3</td>
+                        <td>Completado</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Página del autor</th>
+                        <td>Presentación personal, pasatiempos y galería de fotos.</td>
+                        <td>HTML5</td>
+                        <td>Completado</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Formulario de contacto</th>
+                        <td>Formulario accesible con fieldset, labels y validación nativa.</td>
+                        <td>HTML5, CSS3</td>
+                        <td>Completado</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Estándares W3C</th>
+                        <td>Investigación sobre el formato vectorial SVG.</td>
+                        <td>HTML5</td>
+                        <td>Completado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="galeria" class="block">
+            <span class="label">04 — momentos</span>
+            <h2>Galería</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="img/foto-amigos.jpeg" alt="Jhosue junto a dos amigos al aire libre, con un caballo detrás" width="300" height="200">
+                    <figcaption>Tiempo con amigos.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/foto-graduacion.jpeg" alt="Jhosue vestido con toga y birrete el día de su graduación" width="200" height="280">
+                    <figcaption>Día de mi graduación.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <article id="estandares" class="block">
+            <span class="label">05 — investigación</span>
+            <h2>Estándar W3C: ¿qué es SVG?</h2>
+            <p>SVG es un formato basado en XML, definido como estándar por el W3C, para describir gráficos
+                vectoriales bidimensionales. En lugar de almacenar una imagen como una cuadrícula de píxeles,
+                un archivo SVG describe formas —líneas, curvas, rectángulos, círculos, texto— mediante
+                coordenadas y atributos matemáticos.</p>
+            <p>Por qué es relevante en el desarrollo web:</p>
+            <ul>
+                <li>Se escala sin pérdida de calidad en cualquier resolución.</li>
+                <li>Es texto plano: se puede editar, animar y estilizar con CSS y JavaScript.</li>
+                <li>Suele pesar menos que un PNG o JPG equivalente.</li>
+                <li>Es indexable y accesible: admite atributos ARIA y elementos descriptivos.</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer id="contacto">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h2>Contacto</h2>
+                <p>¿Quieres escribirme? Usa el <a href="contact.html">formulario de contacto</a> o
+                    encuéntrame por los siguientes medios.</p>
+                <ul class="contact-list">
+                    <li>Correo: jhosue.aguilar@ejemplo.com</li>
+                    <li>Ciudad: Arequipa, Perú</li>
+                    <li>Universidad: Universidad Nacional de San Agustín</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Datos del curso</h2>
+                <ul class="contact-list">
+                    <li>Curso: Introducción al Desarrollo Web</li>
+                    <li>Docente: Ing. Rene Alonso Nieto Valencia</li>
+                    <li>Alumno: Jhosue Joaquin Aguilar Pacheco</li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Jhosue Joaquin Aguilar Pacheco. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
-
-
-
-
-
-
 </html>
