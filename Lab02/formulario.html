@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jhosue Aguilar">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <form action="/procesar" method="POST" class="card">
+
+            <h1>Formulario de Registro</h1>
+
+            <fieldset>
+
+                <legend>Datos Personales</legend>
+
+                <div class="form-group">
+                    <label for="codigo" class="form-label">Codigo de Estudiante</label>
+                    <input type="text" name="codigo" id="codigo" class="form-input" required pattern="[0-9]{8}"
+                        maxlength="8" inputmode="numeric" placeholder="12345678">
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombres" class="form-label">Apellidos y Nombres:</label>
+                    <input type="text" name="nombres" id="nombres" class="form-input" required placeholder="Nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="nacimiento" class="form-label">Fecha de nacimiento: </label>
+                    <input type="date" name="nacimiento" id="nacimiento" class="form-input"
+                        required min="1970-01-01" max="2008-12-31">
+                </div>
+
+                <div class="form-group">
+                    <label for="carrera" class="form-label">Carrera Profesional:</label>
+                    <select name="carrera" id="carrera" class="form-input" required>
+                        <option value="">Carrera Profesional</option>
+                        <option value="sistemas">Ingenieria de Sistemas</option>
+                        <option value="mecanica">Ingenieria Mecanica</option>
+                        <option value="civil">Ingenieria Civil</option>
+                        <option value="industrial">Ingenieria Industrial</option>
+                        <option value="electrica">Ingenieria Electrica</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <span class="form-label">Turno:</span>
+                    <input type="radio" name="turno" id="turno-m" value="mañana" required>
+                    <label for="turno-m">Mañana</label><br>
+                    <input type="radio" name="turno" id="turno-t" value="tarde" required>
+                    <label for="turno-t">Tarde</label><br>
+                    <input type="radio" name="turno" id="turno-n" value="noche" required>
+                    <label for="turno-n">Noche</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="ciclo" class="form-label">Ciclo actual:</label>
+                    <input type="number" id="ciclo" name="ciclo" class="form-input" min="1" max="10"
+                        required placeholder="Ciclo actual">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Datos de la Cuenta</legend>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo Institucional:</label>
+                    <input type="email" id="email" name="email" class="form-input"
+                        required placeholder="usuario@universidad.edu.pe">
+                </div>
+
+                <div class="form-group">
+                    <label for="contraseña" class="form-label">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" class="form-input"
+                        required placeholder="Contraseña" minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}">
+                </div>
+
+                <div class="form-group">
+                    <label for="comentarios" class="form-label">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios" class="form-input"
+                            rows="3" maxlength="300" required placeholder="Ingrese comentario..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn" id="registro" disabled>Registrar</button>
+
+        </form>
+
+        <script>
+            const terminos = document.getElementById("terminos");
+            const btnRegistrar = document.getElementById("registro");
+
+            terminos.addEventListener("change", () => {
+                btnRegistrar.disabled = !terminos.checked;
+            });
+        </script>
+    </body>
+</html>
