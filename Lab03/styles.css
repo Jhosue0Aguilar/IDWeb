@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --color-primario: #2c3e91;
+  --color-secundario: #f4b400;
+  --color-texto: #2b2b2b;
+  --color-fondo-claro: #f8f9fa;
+  --radio-borde: 10px;
+  --transicion: all 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   HERO SECTION (Flexbox nativo)
+========================================= */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: var(--color-fondo-claro);
+}
+
+.hero__texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero__texto h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+}
+
+.hero__texto p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.hero__imagen {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.hero__imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radio-borde);
+}
+
+/* En móviles: imagen debajo del texto */
+@media (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* =========================================
+   CATÁLOGO DE CURSOS (CSS Grid nativo)
+========================================= */
+.cursos {
+  padding: 4rem 2rem;
+}
+
+.cursos__titulo {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--color-primario);
+}
+
+.cursos__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr; /* Móvil: 1 columna (<576px) */
+}
+
+/* Tablets: 2 columnas (>=576px) */
+@media (min-width: 576px) {
+  .cursos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Escritorio: 3 columnas (>=992px) */
+@media (min-width: 992px) {
+  .cursos__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Escritorio grande: 4 columnas (opcional, >=1200px) */
+@media (min-width: 1200px) {
+  .cursos__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Alternativa automática con auto-fit (comentada como referencia):
+.cursos__grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+*/
+
+.curso-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radio-borde);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: var(--transicion);
+}
+
+.curso-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.curso-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.curso-card__body {
+  padding: 1.2rem;
+}
+
+.curso-card__body h3 {
+  font-size: 1.1rem;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+.curso-card__body p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* =========================================
+   NOTICIAS Y EVENTOS
+========================================= */
+.noticias {
+  background-color: var(--color-fondo-claro);
+}
+
+.noticias .card {
+  border: none;
+  border-radius: var(--radio-borde);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================
+   UTILIDADES GENERALES
+========================================= */
+.btn-primary {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+.btn-primary:hover {
+  background-color: #1f2c70;
+  border-color: #acb1cc;
+}
+
+.text-secundario {
+  color: var(--color-secundario);
+}
