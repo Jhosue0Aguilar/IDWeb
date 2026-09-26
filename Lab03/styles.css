@@ -17,9 +17,7 @@ body {
   padding: 0;
 }
 
-/* =========================================
-   HERO SECTION (Flexbox nativo)
-========================================= */
+
 .hero {
   display: flex;
   flex-direction: row;
@@ -60,7 +58,6 @@ body {
   border-radius: var(--radio-borde);
 }
 
-/* En móviles: imagen debajo del texto */
 @media (max-width: 767px) {
   .hero {
     flex-direction: column;
@@ -69,9 +66,6 @@ body {
   }
 }
 
-/* =========================================
-   CATÁLOGO DE CURSOS (CSS Grid nativo)
-========================================= */
 .cursos {
   padding: 4rem 2rem;
 }
@@ -85,35 +79,27 @@ body {
 .cursos__grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: 1fr; /* Móvil: 1 columna (<576px) */
+  grid-template-columns: 1fr; 
 }
 
-/* Tablets: 2 columnas (>=576px) */
+
 @media (min-width: 576px) {
   .cursos__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Escritorio: 3 columnas (>=992px) */
 @media (min-width: 992px) {
   .cursos__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Escritorio grande: 4 columnas (opcional, >=1200px) */
 @media (min-width: 1200px) {
   .cursos__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-/* Alternativa automática con auto-fit (comentada como referencia):
-.cursos__grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-*/
 
 .curso-card {
   background: #fff;
@@ -150,9 +136,6 @@ body {
   color: #666;
 }
 
-/* =========================================
-   NOTICIAS Y EVENTOS
-========================================= */
 .noticias {
   background-color: var(--color-fondo-claro);
 }
@@ -163,9 +146,6 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
-/* =========================================
-   UTILIDADES GENERALES
-========================================= */
 .btn-primary {
   background-color: var(--color-primario);
   border-color: var(--color-primario);
