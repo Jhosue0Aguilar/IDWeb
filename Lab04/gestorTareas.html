@@ -3,11 +3,83 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gestor de Tareas Universitarias | Universidad Nacional San Agustín</title>
+        <title>Gestor de Tareas Universitarias | Universidad Nacional de San Agustín</title>
         <meta name="description" content="Aplicación interactiva para gestionar tareas académicas sin recargar la página.">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="tareas.css">
+        <link rel="stylesheet" href="syles.css">
     </head>
-</html>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    Universidad Nacional <br>
+                    de San Agustín
+                </a>
+            </div>
+        </nav>
+ 
+        <header class="tareas-hero">
+            <h1 class="tareas-hero__titulo">Gestor de Tareas Universitarias</h1>
+            <p class="tareas-hero__texto">Organiza tus trabajos, exámenes y entregas por curso. Tus tareas se guardan en este navegador.</p>
+        </header>
+
+        <main class="container py-5">
+            <div class="row g-4">
+ 
+                <!-- Formulario de alta -->
+                <section class="col-12 col-lg-4">
+                    <div class="card tareas-card h-100">
+                        <div class="card-body">
+                            <h2 class="h5 text-center mb-3 tareas-card__titulo">Nueva tarea</h2>
+                            <div id="alertas" aria-live="polite"></div>
+ 
+                            <form id="form-tarea" novalidate>
+                                <div class="mb-3">
+                                    <label for="titulo" class="form-label">Título</label>
+                                    <input type="text" id="titulo" class="form-control" placeholder="Ej: Informe de laboratorio">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="curso" class="form-label">Curso</label>
+                                    <input type="text" id="curso" class="form-control" placeholder="Ej: Introducción al Desarrollo Web">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fechaEntrega" class="form-label">Fecha de entrega</label>
+                                    <input type="date" id="fechaEntrega" class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="bi bi-plus-circle"></i> Agregar tarea
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+ 
+                <!-- Lista de tareas -->
+                <section class="col-12 col-lg-8">
+                    <div class="card tareas-card">
+                        <div class="card-body">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                                <h2 class="h5 mb-0 tareas-card__titulo">Mis tareas</h2>
+                                <div class="btn-group" role="group" aria-label="Filtro de tareas" id="filtros">
+                                    <button type="button" class="btn btn-outline-primary btn-sm active" data-filtro="todas">Todas</button>
+                                    <button type="button" class="btn btn-outline-primary btn-sm" data-filtro="pendientes">Pendientes</button>
+                                    <button type="button" class="btn btn-outline-primary btn-sm" data-filtro="completadas">Completadas</button>
+                                </div>
+                            </div>
+ 
+                            <p class="small text-muted" id="resumen"></p>
+ 
+                            <ul class="list-group" id="lista-tareas"></ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html> 

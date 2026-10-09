@@ -1,0 +1,127 @@
+:root {
+  --color-primario: #2c3e91;
+  --color-secundario: #f4b400;
+  --color-texto: #2b2b2b;
+  --color-fondo-claro: #f8f9fa;
+  --radio-borde: 10px;
+  --transicion: all 0.3s ease;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+.btn-primary {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+ 
+.btn-primary:hover {
+  background-color: #1f2c70;
+  border-color: #1f2c70;
+}
+ 
+.btn-outline-primary {
+  color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+ 
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+  color: #fff;
+}
+
+.tareas-hero {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background-color: var(--color-fondo-claro);
+}
+ 
+.tareas-hero__titulo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: 0.75rem;
+}
+ 
+.tareas-hero__texto {
+  font-size: 1.05rem;
+  color: #555;
+  margin: 0;
+}
+ 
+.tareas-card {
+  border: none;
+  border-radius: var(--radio-borde);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+ 
+.tareas-card__titulo {
+  color: var(--color-primario);
+  font-weight: 700;
+}
+
+.tarea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: var(--transicion);
+}
+ 
+.tarea__info {
+  flex: 1;
+  min-width: 0;
+}
+ 
+.tarea__titulo {
+  font-weight: 600;
+  margin: 0;
+}
+ 
+.tarea__detalle {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+ 
+.tarea__acciones {
+  display: flex;
+  gap: 0.5rem;
+}
+ 
+.tarea--completada .tarea__titulo {
+  text-decoration: line-through;
+  color: #888;
+}
+ 
+.tarea--completada {
+  background-color: var(--color-fondo-claro);
+  opacity: 0.85;
+}
+ 
+.tarea__detalle--vencida {
+  color: #dc3545;
+  font-weight: 600;
+}
+ 
+.tarea__vacia {
+  text-align: center;
+  color: #888;
+  padding: 2rem 1rem;
+}
+ 
+@media (max-width: 575px) {
+  .tarea {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
