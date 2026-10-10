@@ -14,9 +14,10 @@ let filtroActual = 'todas';
 
 function cargarTareas() {
     try {
-        const guardadas = JSON.parse(localStorage.getItem(CLAVE_STORAGE));
+        const guardadas = JSON.parse(localStorage.getItem(Clave_Storage));
         return Array.isArray(guardadas) ? guardadas : [];
-    } catch (error) {
+    } 
+    catch (error) {
         return [];
     }
 }

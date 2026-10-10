@@ -13,7 +13,7 @@
  
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
-  background: linear-gradient(135deg,rgb(116, 107, 164), rgb(128, 135, 150));
+  background: linear-gradient(135deg,rgb(221, 218, 233), rgb(128, 135, 150));
   color: var(--color-texto);
   margin: 0;
   padding: 0;
