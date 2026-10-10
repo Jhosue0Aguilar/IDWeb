@@ -102,7 +102,6 @@ formulario.addEventListener('submit', (evento) => {
     renderizarTareas();
 });
  
-// ---------- Operaciones sobre el arreglo ----------
 function alternarEstado(id) {
     const tarea = tareas.find((t) => t.id === id);
     if (!tarea) return;
